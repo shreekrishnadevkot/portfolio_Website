@@ -1,0 +1,172 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbeafe; /* A light blue-gray background */
+  color: #111;
+  line-height: 1.6;
+  /* margin: 20px 20px 20px 20px; */
+  padding: 64px;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Navbar */
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-center {
+  font-weight: bold;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #4b5563; /* Grayish-blue color for links */
+  font-size: 1rem;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0867ed; /* Darker gray on hover */
+}
+
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  position: absolute;
+  top: 60px;
+  left: 20px;
+  right: 20px;
+}
+
+.mobile-nav a {
+  color: #333;
+  font-size: 14px;
+}
+
+.mobile-nav.active {
+  display: flex;
+}
+
+/* Section Title */
+.section-title {
+  text-align: center;
+  background: white;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1100px;
+  font-size: 22px;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px 40px;
+  max-width: 1200px;
+  margin: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  /* Keep original aspect ratio */
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* nav responsive  */
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-body {
+    flex-direction: column;
+  }
+}
+
+@media ( max-width: 768px ) {
+    body {
+        padding: 10px;
+    }
+}

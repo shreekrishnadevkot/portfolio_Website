@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>illustration </title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/responsive.css">
+    <style>
+
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1100px;
+            font-size: 22px;
+            font-weight: bold;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 30px;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            /* Keep original aspect ratio */
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            display: block;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="nav-left">
+            <a href="/index.html">HOME</a>
+            <a href="/index.html">ABOUT-ME</a>
+        </div>
+        <div class="nav-center">MEOBIT</div>
+        <div class="nav-right">
+            <a href="/index.html">SKILL</a>
+            <a href="/index.html">CONTACT</a>
+        </div>
+
+        <!-- Hamburger button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="/index.html">Skills</a>
+            <a href="/index.html">Contact</a>
+            <a href="/index.html">Portfolio</a>
+            <a href="/index.html">About Me</a>
+        </div>
+    </header>
+
+
+    <!-- Section illustration  -->
+    <div class="section-title">
+        illustration
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+        <img src="/illustration/zebra-02.jpg" alt="Post 1">
+    </div>
+
+     <footer>
+        <div>
+            <h1>
+                Thank you for Visiting............................
+            </h1>
+        </div>
+    </footer>
+
+
+    <!-- script for nab bar  -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/responsive.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="nav-left">
+            <a href="#">HOME</a>
+            <a href="#about">ABOUT-ME</a>
+        </div>
+        <div class="nav-center">MEOBIT</div>
+        <div class="nav-right">
+            <a href="#skill">SKILLS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
+        <!-- Hamburger button -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#skill">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Home</a>
+            <a href="#about">About-Me</a>
+        </div>
+    </header>
+
+    <!-- introduction section with photo -->
+    <div class="main-container">
+        <div class="card preview-card">
+            <div>
+                <img src="./my photo/photo of me.jpg" alt="Profile" class="img-own">
+            </div>
+        </div>
+        <div class="card intro-card">
+            <h1 class="intro-heading">Hi — I'm Shree Krishna Devkota </h1>
+            <p class="intro-description">
+                Graphic & Brand Designer. I make logos, Brand identity, thumbnails and social content that performs well
+                on feeds. <br> I have two year of experience.
+            </p>
+            <div class="preview-buttons">
+                <a href="./portfolio.html" target="_blank"><button class="preview-btn"> Portfolio</button></a>
+            </div>
+        </div>
+    </div>
+    <!-- main body containers -->
+    <div class="main-body">
+        <div class="skill-contact">
+            <div class="skill-1" id="skill">
+                <main class="card" role="main">
+                    <div class="header">
+                        <div>
+                            <div class="title">My Skills</div>
+                            <div class="subtitle">Visual representation of my proficiency — higher percentage = stronger
+                                skill</div>
+                        </div>
+                    </div>
+
+                    <section class="skills" aria-label="Skills list">
+
+                        <!-- Skill item template: change data-percent to set proficiency -->
+                        <div class="skill" tabindex="0">
+                            <div class="skill-row">
+                                <div class="skill-name"> Photoshop / illustrator</div>
+                                <div class="skill-percent">95%</div>
+                            </div>
+                            <div class="bar-wrap" aria-hidden="true">
+                                <span class="bar-fill g-blue" data-percent="95" style="--target:95%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill" tabindex="0">
+                            <div class="skill-row">
+                                <div class="skill-name">HTML & CSS</div>
+                                <div class="skill-percent">70%</div>
+                            </div>
+                            <div class="bar-wrap" aria-hidden="true">
+                                <span class="bar-fill g-green" data-percent="70" style="--target:70%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill" tabindex="0">
+                            <div class="skill-row">
+                                <div class="skill-name"> ui/ux </div>
+                                <div class="skill-percent">60%</div>
+                            </div>
+                            <div class="bar-wrap" aria-hidden="true">
+                                <span class="bar-fill g-pink" data-percent="60" style="--target:60%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill" tabindex="0">
+                            <div class="skill-row">
+                                <div class="skill-name">Logo Design </div>
+                                <div class="skill-percent">90%</div>
+                            </div>
+                            <div class="bar-wrap" aria-hidden="true">
+                                <span class="bar-fill g-purple" data-percent="90" style="--target:90%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill" tabindex="0">
+                            <div class="skill-row">
+                                <div class="skill-name">Branding</div>
+                                <div class="skill-percent">90%</div>
+                            </div>
+                            <div class="bar-wrap" aria-hidden="true">
+                                <span class="bar-fill g-gold" data-percent="90" style="--target:90%"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill" tabindex="0">
+                            <div class="skill-row">
+                                <div class="skill-name">inDesign</div>
+                                <div class="skill-percent">50%</div>
+                            </div>
+                            <div class="bar-wrap" aria-hidden="true">
+                                <span class="bar-fill g-magenta" data-percent="50" style="--target:50%"></span>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <div class="legend" aria-hidden="true">
+                        <div class="item"><span class="swatch"
+                                style="background:linear-gradient(90deg,#4facfe 0%, #00f2fe 100%)"></span> PS / AI
+                        </div>
+                        <div class="item"><span class="swatch"
+                                style="background:linear-gradient(90deg,#34d399 0%, #10b981 100%)"></span> HTML and CSS
+                        </div>
+                        <div class="item"><span class="swatch"
+                                style="background:linear-gradient(90deg,#f472b6 0%, #fb7185 100%)"></span> UI / Visual
+                        </div>
+                        <div class="item"><span class="swatch"
+                                style="background:linear-gradient(90deg,#8b5cf6 0%, #7c3aed 100%)"></span> Logo Design
+                        </div>
+                        <div class="item"><span class="swatch"
+                                style="background:linear-gradient(90deg,#f59e0b 0%, #f97316 100%)"></span> Branding
+                        </div>
+                        <div class="item"><span class="swatch"
+                                style="background:linear-gradient(90deg,#CC00CC 0%, #FF00FF 100%)"></span> inDesign
+                        </div>
+                        <div class="subtitle">Updated: Aug 12, 2025</div>
+                    </div>
+
+                </main>
+
+                <script>
+                    // On load animate bars to their data-percent value and set ARIA attributes for assistive tech.
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const fills = document.querySelectorAll('.bar-fill');
+                        fills.forEach((el, i) => {
+                            const pct = Number(el.getAttribute('data-percent')) || 0;
+                            // clamp between 0 and 100
+                            const safe = Math.max(0, Math.min(100, pct));
+                            // set accessible attributes on the parent .skill
+                            const skill = el.closest('.skill');
+                            if (skill) {
+                                skill.setAttribute('role', 'progressbar');
+                                skill.setAttribute('aria-valuemin', '0');
+                                skill.setAttribute('aria-valuemax', '100');
+                                skill.setAttribute('aria-valuenow', String(safe));
+                                const name = skill.querySelector('.skill-name')?.textContent || `skill-${i + 1}`;
+                                skill.setAttribute('aria-label', `${name} proficiency ${safe} percent`);
+                            }
+
+                            // trigger animation slightly staggered
+                            setTimeout(() => {
+                                el.classList.add('animated');
+                            }, 120 + i * 80);
+
+                            // set the inline width to match target once animation finishes for screen readers that don't read animation.
+                            el.style.width = safe + '%';
+                        });
+                    });
+                </script>
+
+            </div>
+            <div class="contact" id="contact">
+                <section class="contact-section">
+                    <div class="contact-form">
+                        <h2>Contact</h2>
+                        <p>Shoot me a message — I usually reply within a day.</p>
+                        <form>
+                            <input type="text" placeholder="Your name" required>
+                            <input type="email" placeholder="Email" required>
+                            <textarea placeholder="Message" required></textarea>
+                            <button type="submit">Send message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact info</h3>
+                        <p>email: info-meobit@gmail.com <br>phone: +977 98XXXXXXXX</p>
+                        <div class="social-links">
+                            <a href="#">Instagram</a>
+                            <a href="#">Behance</a>
+                            <a href="#">linkdin</a>
+                            <a href="#">youtube</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+        <div class="about-section">
+            <div class="about-card" id="about">
+                <h3>About</h3>
+                <p>I'm a creative designer focused on logo design, social-first content, and Branding. I tailor
+                    visuals
+                    that
+                    help creators and brands communicate clearly.
+                </p>
+                <h3>Qualification</h3>
+                <p>I have compleated 10+2 and currently studing Bachelor in information technology (BIT) </p>
+                <h3>experience </h3>
+                <p>I am being working from two yesr in this field as a thumbnail artist, logo designer and social media visual designer. i have worked with manny youtuber. </p>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <div>
+            <h1>
+                Thank you for Visiting
+            </h1>
+        </div>
+    </footer>
+
+
+
+
+    <!-- script for nab bar  -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileNav').classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

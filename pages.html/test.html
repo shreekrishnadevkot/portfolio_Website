@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portrait + Landscape Grid</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f6f7fb;
+      padding: 32px;
+    }
+
+    h1 { margin-bottom: 18px; font-size: 1.5rem; }
+
+    .gallery {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Landscape style */
+    .grid-item.landscape {
+      aspect-ratio: 4 / 3;  /* wide */
+    }
+
+    /* Portrait style */
+    .grid-item.portrait {
+      aspect-ratio: 3 / 4;  /* tall */
+    }
+
+    .grid-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5));
+      display: flex;
+      align-items: flex-end;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      padding: 12px;
+    }
+
+    .caption {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    .grid-item:hover img { transform: scale(1.05); }
+    .grid-item:hover .overlay { opacity: 1; }
+
+    @media (max-width: 480px) {
+      body { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Portrait + Landscape Grid Showcase</h1>
+
+  <div class="gallery">
+    <div class="grid-item landscape">
+      <img src="https://picsum.photos/id/1015/800/600" alt="Landscape mountain">
+      <div class="overlay"><div class="caption">Landscape Image</div></div>
+    </div>
+
+    <div class="grid-item portrait">
+      <img src="https://picsum.photos/id/1016/600/900" alt="Portrait forest">
+      <div class="overlay"><div class="caption">Portrait Image</div></div>
+    </div>
+
+    <div class="grid-item landscape">
+      <img src="https://picsum.photos/id/1025/900/600" alt="Landscape dog">
+      <div class="overlay"><div class="caption">Landscape Image</div></div>
+    </div>
+
+    <div class="grid-item portrait">
+      <img src="https://picsum.photos/id/1039/600/900" alt="Portrait city">
+      <div class="overlay"><div class="caption">Portrait Image</div></div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  /* intro and photo section  */
+  .main-container {
+    flex-direction: column;
+    /* Stack cards vertically on smaller screens */
+    align-items: center;
+    /* Center stacked cards */
+  }
+
+  .intro-card,
+  .preview-card {
+    min-width: unset;
+    /* Remove min-width for better stacking */
+    width: 100%;
+    /* Take full width */
+    max-width: 600px;
+    /* Max width for individual cards */
+  }
+
+  .intro-heading {
+    font-size: 2.2rem;
+  }
+
+  .intro-description {
+    font-size: 1rem;
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero,
+  .section-container,
+  .contact-section {
+    flex-direction: column;
+  }
+}
+
+/* nav responsive  */
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+}
+
+/* animation of about section */
+@keyframes fillWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--target);
+  }
+}
+
+.bar-fill.animated {
+  animation: fillWidth 1.2s cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+}
+
+/* small responsive tweak */
+@media (max-width: 560px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .skills {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero,
+  .section-container,
+  .contact-section {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-body {
+    flex-direction: column;
+  }
+}
+
+@media ( max-width: 768px ) {
+    body {
+        padding: 10px;
+    }
+}
